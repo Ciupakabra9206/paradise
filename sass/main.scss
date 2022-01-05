@@ -196,7 +196,26 @@ body {
         font-size: 1.4rem;
     }
 }
+ //hero-img
 
+ .hero-img {
+     position: relative;
+     padding: 10em 2em;
+     text-align: center;
+     @include  heroImages('../img/polyn-mini.jpg');
+     color: $pure-white;
+     overflow: hidden;
+
+     &__title {
+        font-family: 'Dancing Script', cursive;
+        font-size: 4.8rem;
+        margin-bottom: 0.5em;
+     }
+
+     &__text {
+         padding: 1em 0;
+     }
+ }
 
 
 //media
@@ -227,6 +246,19 @@ body {
         &__img {
             margin-bottom: 0;
             max-height: 300px;
+        }
+    }
+
+    .hero-img {
+        padding: 30rem 2em;
+
+        hr {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        &__text {
+            font-size: 2.2rem;
         }
     }
 }
@@ -295,4 +327,21 @@ body {
             font-size: 2.2rem;
         }
     }
+
+    .hero-img {
+        padding: 40rem 2em;
+        background-image: $blue-gradient, url('../img/polyn-normal.jpg');
+
+
+        &__title {
+            font-size: 7.2rem;
+        }
+
+        hr {
+            width: 60%;
+            max-width: 900px;
+        }
+    }
+
+
 }

@@ -326,6 +326,28 @@ body {
   font-size: 1.4rem;
 }
 
+.hero-img {
+  position: relative;
+  padding: 10em 2em;
+  text-align: center;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/polyn-mini.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-img__title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4.8rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-img__text {
+  padding: 1em 0;
+}
+
 @media (min-width: 768px) {
   .dreams__box {
     -webkit-box-orient: horizontal;
@@ -353,6 +375,16 @@ body {
   .dreams__img {
     margin-bottom: 0;
     max-height: 300px;
+  }
+  .hero-img {
+    padding: 30rem 2em;
+  }
+  .hero-img hr {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .hero-img__text {
+    font-size: 2.2rem;
   }
 }
 
@@ -410,6 +442,17 @@ body {
   }
   .dreams__text {
     font-size: 2.2rem;
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/polyn-normal.jpg");
+  }
+  .hero-img__title {
+    font-size: 7.2rem;
+  }
+  .hero-img hr {
+    width: 60%;
+    max-width: 900px;
   }
 }
 /*# sourceMappingURL=main.css.map */
