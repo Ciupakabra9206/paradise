@@ -334,10 +334,74 @@ body {
     }
 }
 
+//offers 
+.offers {
+    position: relative;
+    @include heroImages('../img/back-mini.jpg');
+    overflow: hidden;
+
+    .section-heading {
+        color: $pure-white;
+    }
+
+    &__option {
+        margin: 1em 0;
+        box-shadow: 5px 5px 10px #2e2e2e;
+        background-color: $pure-white;;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-info {
+            padding: 2em;
+            background-color: $pure-white;
+            z-index: 10;
+        }
+
+        &-heading {
+            margin-bottom: 0.5em;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
+
+        &-text {
+            margin-bottom: 0.5em;
+            font-size: 1.3rem;
+            color: $dark;
+        }
+
+        &-btn {
+            margin-bottom: 1em;
+            padding: 0.8em;
+            width: 100%;
+            color: $pure-white;
+            background-color: $main-color;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &::before {
+                background-color: $secondary-color;
+            }
+        }
+    }
+    
+
+   
+
+}
+
 
 //media
 
-@media(min-width: 768px) {
+@media(min-width: 576px) {
     .dreams {
         &__box {
             flex-direction: row;
@@ -366,6 +430,64 @@ body {
         }
     }
 
+    .offers {
+        &__option {
+            display: flex;
+            margin: 2em 0;
+            width: 100%;
+
+            &-img {
+                width: 50%;
+                height: auto;
+
+                &--right {
+                    order: 1;
+                }
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-heading {
+                margin-bottom: 0.5em;
+                font-size: 3.6rem;
+            }
+
+            &-btn {
+                padding: 1em;
+            }
+        }
+    }
+
+    
+}
+
+@media(min-width: 768px) {
+    .white-blocks {
+        height: 50px;
+        width: 45%;
+    }
+
+    .header {
+        &__heading {
+            font-size: 6.6rem;
+        }
+    
+        &__text {
+            font-size: 2.2rem;
+        }
+        &__btn {
+            font-size: 1.6rem;
+        }
+    }
+
+    .dreams {
+        font-size: 1.8rem;
+    }
+
     .hero-img {
         padding: 30rem 2em;
 
@@ -390,30 +512,6 @@ body {
             margin: 1em;
             width: 40%;
         }
-    }
-}
-
-@media(min-width: 768px) {
-    .white-blocks {
-        height: 50px;
-        width: 45%;
-    }
-
-    .header {
-        &__heading {
-            font-size: 6.6rem;
-        }
-    
-        &__text {
-            font-size: 2.2rem;
-        }
-        &__btn {
-            font-size: 1.6rem;
-        }
-    }
-
-    .dreams {
-        font-size: 1.8rem;
     }
 }
 
@@ -470,6 +568,20 @@ body {
         hr {
             width: 60%;
             max-width: 900px;
+        }
+    }
+
+    .offers {
+        background-image: $blue-gradient, url(../img/back-normal.jpg);
+
+        &__option {
+            &-img {
+                object-fit: cover;
+            }
+
+            &-text {
+                font-size: 1.5rem;
+            }
         }
     }
 
